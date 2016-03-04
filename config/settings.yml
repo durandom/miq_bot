@@ -8,15 +8,20 @@ github_credentials:
 commit_monitor:
   bugzilla_product:
 diff_checker:
-  blacklisted_strings:
-    matchers:
-      - "redhat"
-      - "cloudforms"
-      - "rdu2"
-      - "red hat"
+  redhat:
+    severity: ":black_circle:"
+  cloudforms:
+    severity: ":black_circle:"
+  rdu2:
+    severity: ":black_circle:"
+  red hat:
+    severity: ":red_circle:"
+    except:
+      - spec/vcr_
   puts:
     except:
       - tools/
+    severity: ":red_circle:"
 gemfile_checker:
   pr_contacts: []
   enabled_repos: []
