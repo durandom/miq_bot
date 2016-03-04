@@ -7,12 +7,16 @@ github_credentials:
   password:
 commit_monitor:
   bugzilla_product:
-blacklisted_text_checker:
-  strings:
-    - "redhat"
-    - "cloudforms"
-    - "rdu2"
-    - "red hat"
+diff_checker:
+  blacklisted_strings:
+    matchers:
+      - "redhat"
+      - "cloudforms"
+      - "rdu2"
+      - "red hat"
+  puts:
+    except:
+      - tools/
 gemfile_checker:
   pr_contacts: []
   enabled_repos: []
